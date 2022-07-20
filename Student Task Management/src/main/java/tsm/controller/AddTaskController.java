@@ -46,7 +46,7 @@ public class AddTaskController extends HttpServlet {
 		
 		dao.addTask(t);
 		request.setAttribute("tasks", TaskDAO.getAllTask());
-		RequestDispatcher view = request.getRequestDispatcher("listTask.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("list-Task.jsp");
 		view.forward(request, response);
 		
 	}

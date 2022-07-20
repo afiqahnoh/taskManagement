@@ -31,7 +31,7 @@ public class ListTaskController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		request.setAttribute("tasks", TaskDAO.getAllTask());
-		RequestDispatcher view = request.getRequestDispatcher("listTask.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("list-Task.jsp");
 		view.forward(request, response);
 	}
 }

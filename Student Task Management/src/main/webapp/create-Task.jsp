@@ -13,7 +13,7 @@
   <a href="ListTaskController" class="split" >List task</a>
 <div class="center">
 <h1 class="title">Add Task</h1>
-	<form action="AddTask" method="post" class="inline">
+	<form action="AddTaskController" method="post" class="inline">
         <div class="input-icons">
             <i class="fa fa-book icon"></i>
             <input class="input-field" type="text" placeholder="Task Name" name="task_Name">

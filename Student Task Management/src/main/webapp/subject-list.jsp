@@ -27,13 +27,15 @@
   		<th>No</th>
     	<th>Subject Code</th>
     	<th>Subject Name</th>
-    	<th colspan="2">Action</th>
+    	<th colspan="3">Action</th>
   	</tr>
 	<c:forEach items="${subjects}" var="s" varStatus="subjects">
 	<tr>
 		<td><c:out value="${s.subject_Id}"/></td>
 		<td><c:out value="${s.subject_Code}"/></td>
 		<td><c:out value="${s.subject_Name}"/></td>
+		
+		<td><a class="btn btn-primary" href="ListTaskController?id=<c:out value="${t.task_ID}"/>">Task</a></td>
 		<td><a href="UpdateSubjectController?subject_Id=<c:out value="${s.subject_Id}"/>"><button class="btn"><i class="fa fa-edit"></i></button></a></td>
 		<td><a id="<c:out value="${s.subject_Code}"/>" onclick ="confirmation(this.id)"><button class="btn"><i class="fa fa-trash"></i></button></a></td>
 	</tr>

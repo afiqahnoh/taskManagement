@@ -33,7 +33,7 @@ public class DeleteTaskController extends HttpServlet {
 		int task_ID = Integer.parseInt(request.getParameter("task_ID"));
 		dao.deleteTask(task_ID);
 		request.setAttribute("tasks", TaskDAO.getAllTask());
-		RequestDispatcher view = request.getRequestDispatcher("listTask.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("list-Task.jsp");
 		view.forward(request, response);
 	}
 

@@ -34,7 +34,7 @@ public class UpdateTaskController extends HttpServlet {
 		// TODO Auto-generated method stub
 		int task_ID = Integer.parseInt(request.getParameter("task_ID"));
 		request.setAttribute("t", TaskDAO.getTaskById(task_ID));
-		RequestDispatcher view = request.getRequestDispatcher("updateTask.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("update-Task.jsp");
 		view.forward(request, response);
 	}
 
@@ -52,7 +52,7 @@ public class UpdateTaskController extends HttpServlet {
 		
 		dao.updateTask(t);
 		request.setAttribute("tasks", TaskDAO.getAllTask());
-		RequestDispatcher view = request.getRequestDispatcher("listTask.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("list-Task.jsp");
 		view.forward(request, response);
 	}
 }
